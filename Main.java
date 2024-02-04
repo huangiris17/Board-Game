@@ -11,9 +11,11 @@ public class Main {
         System.out.print("- Player2 Name: ");
         String name2 = in.next();
 
-        System.out.println("Welcome " + name1 + ", " + name2);
-        in.close();
+        System.out.println("Welcome to the game " + name1 + ", " + name2 + "!");
+        System.out.println();
+
         Game curGame = new Game(name1, name2);
         curGame.gameStart();
+        in.close();
     }
 }

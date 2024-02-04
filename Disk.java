@@ -8,4 +8,9 @@ public class Disk {
     public char getColor() {
         return this.color;
     }
+
+    @Override
+    public String toString() {
+        return Character.toString(this.color);
+    }
 }
