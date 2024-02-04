@@ -48,10 +48,10 @@ public class Game {
                         }
                     }
                 }
-                if (checkWin(p)) {
+                if (checkLine(p)) {
                     System.out.println("⭐️ " + p.getName() + " get 1 score!");
                     p.addScore();
-                    if (checkScore(p)) {
+                    if (checkWin(p)) {
                         isEnd = true;
                         System.out.println("🔥 " + p.getName() + " win!");
                         break;
@@ -79,11 +79,11 @@ public class Game {
         return false;
     }
 
-    private boolean checkScore(Player p) {
+    private boolean checkWin(Player p) {
         return p.getScore() >= 2;
     }
 
-    private boolean checkWin(Player player) {
+    private boolean checkLine(Player player) {
         return checkRow(player) || checkCol(player);
     }
 
@@ -139,4 +139,4 @@ public class Game {
 // + gameStart()
 // + showStatus()
 // + dropDisk()
-// + checkWin()
+// + checkLine()
